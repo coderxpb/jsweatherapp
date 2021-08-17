@@ -1,0 +1,37 @@
+{
+  "name": "jsweatherapp",
+  "version": "1.0.0",
+  "description": "Weather Forecast App written in vanilla JS and SCSS, to use and practice Async/Await, APIs and SCSS among others.",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve",
+    "dbuild": "webpack ",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production webpack "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coderxpb/jsweatherapp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/coderxpb/jsweatherapp/issues"
+  },
+  "homepage": "https://github.com/coderxpb/jsweatherapp#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.15.0",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "html-webpack-plugin": "^5.3.2",
+    "image-webpack-loader": "^7.0.1",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-plugin": "^1.0.5"
+  }
+}
