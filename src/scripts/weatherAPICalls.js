@@ -1,3 +1,5 @@
+import pageDom from './domModifier';
+
 function getUsefulWeatherData(location, data) {
   const newData = {};
   newData.location = location;
@@ -18,6 +20,7 @@ export default async function getWeatherData() {
     const data = await response.json();
     const usefulData = getUsefulWeatherData(inputLocation, data);
     console.log(usefulData);
+    pageDom.changePageDom(usefulData);
   } catch (err) {
     console.log(err);
   }
