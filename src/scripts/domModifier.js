@@ -8,11 +8,14 @@ pageDom.tempF = document.getElementById('weather-temp');
 pageDom.windhumidity = document.getElementById('weather-windhumidity');
 
 pageDom.changePageDom = function (weatherData) {
+  const weatherJ = weatherI;
   pageDom.location.textContent = weatherData.location;
-  pageDom.icon.src = weatherI;
+  pageDom.icon.src = weatherJ;
+  console.log(weatherJ);
   pageDom.desc.textContent = weatherData.desc;
 
   pageDom.tempF.textContent = weatherData.tempF;
+  pageDom.windhumidity.textContent = `${weatherData.windspeed} ${weatherData.humidity}`;
 };
 
 export default pageDom;

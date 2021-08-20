@@ -1,9 +1,48 @@
 html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+/* clears the ‘X’ from Internet Explorer */
+input[type=search]::-ms-clear { display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal { display: none; width : 0; height: 0; }
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700;900&display=swap");
+
+$font-stack: Urbanist, sans-serif;
+
+@mixin page-font($size: 1.5rem,$weight:500){
+	font-family: $font-stack;
+	font-size: $size;
+	font-weight: $weight;
+}
+
+body{
+	height: 100vh;
+	background: #B2FEFA;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to top, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to top, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 
 header{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+
+	padding: 10px;
+
+	p{
+		@include page-font($weight: 900);
+	}
+	input[type="search"]{
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid gray;
+		outline: none;
+		text-align: right;
+	}
 }
 
 .weather-main{
@@ -13,9 +52,21 @@ header{
 	img{
 		width: 80%;
 	}
+	p{
+		margin-top: -10px;
+		@include page-font($size:2rem,$weight:500);
+	}
 }
 
 .weather-numbers{
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+
+	@include page-font($size:1.5rem,$weight:500);
+}
+
+.weather-temp{
+	padding-top: 80px;
+	@include page-font($size:4.5rem,$weight:900);
 }
