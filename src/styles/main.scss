@@ -9,7 +9,7 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { display: none; }
 
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:wght@300;500;700;900&display=swap");
-@use "_weathergradients";
+@import "_wg.scss";
 
 $font-stack: Urbanist, sans-serif;
 
@@ -17,13 +17,11 @@ $font-stack: Urbanist, sans-serif;
 	font-family: $font-stack;
 	font-size: $size;
 	font-weight: $weight;
+	color: rgb(241, 248, 255);
 }
 
 body{
 	height: 100vh;
-	background: #B2FEFA;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to top, #0ED2F7, #B2FEFA);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to top, #0ED2F7, #B2FEFA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 header{
