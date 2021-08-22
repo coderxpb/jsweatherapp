@@ -36,8 +36,8 @@ pageDom.changePageDom = function (weatherData) {
   pageDom.location.textContent = weatherData.location;
 
   pageDom.desc.textContent = weatherData.desc;
-  pageDom.tempF.textContent = weatherData.tempF;
-  pageDom.windhumidity.textContent = `${weatherData.windspeed} ${weatherData.humidity}`;
+  pageDom.tempF.textContent = `${weatherData.tempF} F`;
+  pageDom.windhumidity.textContent = `Wind: ${weatherData.windspeed} \xa0\xa0 Humidity: ${weatherData.humidity}`;
 };
 
 export default pageDom;
