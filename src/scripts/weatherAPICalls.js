@@ -20,8 +20,11 @@ export default async function getWeatherData(inputLocation) {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputLocation}&appid=ab0f54a57cc1277f45830d3aebbcf28e`, { mode: 'cors' });
     const data = await response.json();
     const usefulData = getUsefulWeatherData(data);
-    console.log(data.name);
+    console.log(data.coord.lon, data.coord.lat);
     pageDom.changePageDom(usefulData);
+    const responseHD = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude={current,minutely,alerts}&appid=ab0f54a57cc1277f45830d3aebbcf28e`, { mode: 'cors' });
+    const dataHD = await responseHD.json();
+    console.log(dataHD);
   } catch (err) {
     console.log('enter a valid location');
     console.log(err);

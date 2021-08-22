@@ -4,7 +4,7 @@ import clearN from '../images/amcharts_weathericons/animated/night.svg';
 import rain from '../images/amcharts_weathericons/animated/rainy-7.svg';
 import snow from '../images/amcharts_weathericons/animated/snowy-6.svg';
 import thundestorm from '../images/amcharts_weathericons/animated/thunder.svg';
-import weather from '../images/amcharts_weathericons/animated/weather.svg';
+import weather from '../images/amcharts_weathericons/animated/cloudy-day-1.svg';
 import drizzle from '../images/amcharts_weathericons/animated/rainy-5.svg';
 
 const pageDom = {};

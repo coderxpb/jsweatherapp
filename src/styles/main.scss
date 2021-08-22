@@ -49,7 +49,7 @@ header{
 	align-items: center;
 	img{
 		width: 90%;
-		max-width: 600px;
+		max-width: 400px;
 	}
 	p{
 		margin-top: -70px;
@@ -69,3 +69,4 @@ header{
 	padding-top: 80px;
 	@include page-font($size:4.5rem,$weight:900);
 }
+
