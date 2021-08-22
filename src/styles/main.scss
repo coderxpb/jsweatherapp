@@ -57,6 +57,11 @@ header{
 	}
 }
 
+.weather-icon{
+	width: 90%;
+	max-width: 400px;
+}
+
 .weather-numbers{
 	display: flex;
 	flex-direction: column;
