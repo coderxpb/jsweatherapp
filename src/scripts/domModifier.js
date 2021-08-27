@@ -12,7 +12,7 @@ pageDom.body = document.querySelector('body');
 pageDom.location = document.getElementById('weather-location');
 pageDom.icon = document.getElementById('weather-icon');
 pageDom.desc = document.getElementById('weather-desc');
-pageDom.tempF = document.getElementById('weather-temp');
+pageDom.tempC = document.getElementById('weather-temp');
 pageDom.windhumidity = document.getElementById('weather-windhumidity');
 pageDom.icons = {
   clouds: cloud,
@@ -36,7 +36,9 @@ pageDom.changePageDom = function (weatherData) {
   pageDom.location.textContent = weatherData.location;
 
   pageDom.desc.textContent = weatherData.desc;
-  pageDom.tempF.textContent = `${(weatherData.tempF - 273.15).toFixed(2)} C`;
+  const tempC = weatherData.tempF - 273.15;
+  const tempClean = tempC.toFixed(2);
+  pageDom.tempC.textContent = `${tempClean} C`;
   pageDom.windhumidity.textContent = `Wind: ${weatherData.windspeed} \xa0\xa0 Humidity: ${weatherData.humidity}`;
 };
 
