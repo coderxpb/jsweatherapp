@@ -13,7 +13,10 @@ pageDom.location = document.getElementById('weather-location');
 pageDom.icon = document.getElementById('weather-icon');
 pageDom.desc = document.getElementById('weather-desc');
 pageDom.tempC = document.getElementById('weather-temp');
+pageDom.feelsLike = document.getElementById('weather-feelslike');
 pageDom.windhumidity = document.getElementById('weather-windhumidity');
+pageDom.cloudsrain = document.getElementById('weather-cloudsrain');
+
 pageDom.icons = {
   clouds: cloud,
   clear: clearD,
@@ -38,8 +41,11 @@ pageDom.changePageDom = function (weatherData) {
   pageDom.desc.textContent = weatherData.desc;
   const tempC = weatherData.tempF - 273.15;
   const tempClean = tempC.toFixed(2);
-  pageDom.tempC.textContent = `${tempClean} C`;
-  pageDom.windhumidity.textContent = `Wind: ${weatherData.windspeed} \xa0\xa0 Humidity: ${weatherData.humidity}`;
+  const feelsLikeClean = weatherData.feelsLike.toFixed(2);
+  pageDom.tempC.textContent = `${tempClean}° C`;
+  pageDom.feelsLike.textContent = `Feels like ${feelsLikeClean}° C`;
+  pageDom.windhumidity.textContent = `Wind: ${weatherData.windspeed} m/s \xa0\xa0 Humidity: ${weatherData.humidity}%`;
+  pageDom.cloudsrain.textContent = `Clouds: ${weatherData.clouds}% \xa0\xa0\xa0\xa0\xa0 Rain: ${weatherData.rain}mm`;
 };
 
 export default pageDom;
