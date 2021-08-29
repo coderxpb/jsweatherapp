@@ -10,7 +10,11 @@ function getUsefulWeatherData(data) {
   newData.windspeed = data.wind.speed;
   newData.feelsLike = data.main.feels_like - 273.15;
   newData.clouds = data.clouds.all;
-  newData.rain = data.rain['1h'];
+  try {
+    newData.rain = data.rain['1h'];
+  } catch (err) {
+    newData.rain = 0;
+  }
   return newData;
 }
 
