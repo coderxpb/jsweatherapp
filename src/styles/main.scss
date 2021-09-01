@@ -39,14 +39,15 @@ header{
 	p{
 		@include page-font($weight: 900);
 	}
-	input{
+}
+
+.weather-search{
 		background: transparent;
 		border: none;
 		border-bottom: 1px solid gray;
 		outline: none;
 		text-align: right;
 		z-index: 3;
-	}
 }
 
 .weather-main{
